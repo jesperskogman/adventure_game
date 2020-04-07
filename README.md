@@ -10,4 +10,4 @@ Sen så kan jag börja lägga till mer extragrejor som kanske stats, inventory k
 
 Log 07/04/20
 
-Idag har jag jobbat med att tänka ut vad jag ska göra, efter det så började jag planera på projektet genom att skapa ett projektbräde på git hub där jag la in sakerna som behövs i mitt projekt så att det ska täcka alla grunder som jag behöver täcka.
+Idag har jag jobbat med att tänka ut vad jag ska göra, efter det så började jag planera på projektet genom att skapa ett projektbräde på github där jag la in sakerna som behövs i mitt projekt så att det ska täcka alla grunder som jag behöver täcka.
