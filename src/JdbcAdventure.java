@@ -10,17 +10,10 @@ public class JdbcAdventure {
 
         ) {
             Statement stmt = conn.createStatement();
-            int story_id = 1;
             int target_id = 2;
-            String strSelect = "select body from story where id = " + story_id;
-            System.out.println("This SQL statement is: " + strSelect + "\n");
-            ResultSet rset = stmt.executeQuery(strSelect);
 
-            System.out.println("Story body:");
-            while (rset.next()) {
-                String body = rset.getString("body");
-                System.out.println(body);
-            }
+            int story_id = 1;
+            System.out.println(getStoryBody(stmt, story_id));
 
             while (target_id != 20) {
                 String strSelect2 = "select target_id, description from links where story_id = " + story_id;
@@ -53,5 +46,19 @@ public class JdbcAdventure {
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
+    }
+
+    public static String getStoryBody(Statement stmt, int story_id) throws SQLException {
+        String strSelect = "select body from story where id = " + story_id;
+        System.out.println("This SQL statement is: " + strSelect + "\n");
+        ResultSet rset = stmt.executeQuery(strSelect);
+
+        System.out.println("Story body:");
+        String body = "";
+        while (rset.next()) {
+            body = rset.getString("body");
+            // System.out.println(body);
+        }
+        return body;
     }
 }
