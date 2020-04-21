@@ -1,7 +1,7 @@
 import java.sql.*;
 import java.util.Scanner;
 
-public class JdbcSelectTest {
+public class JdbcAdventure {
     public static void main(String[] args) {
         try (
                 Connection conn = DriverManager.getConnection(
