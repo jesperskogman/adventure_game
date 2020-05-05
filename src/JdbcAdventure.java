@@ -3,13 +3,12 @@ import java.util.Scanner;
 
 public class JdbcAdventure {
     public static void main(String[] args) {
-        try (
-                Connection conn = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:3306/soloaventyr?allowPublicKeyRetrieval=TRUE&useSSL=false&serverTimezone=UTC",
-                        "jesper", "elev123");
+        try
 
-        ) {
-            Statement stmt = conn.createStatement();
+
+         {
+             Connection conn = getConnection();
+             Statement stmt = conn.createStatement();
             int target_id = 2;
 
             int story_id = 1;
@@ -48,17 +47,29 @@ public class JdbcAdventure {
         }
     }
 
-    public static String getStoryBody(Statement stmt, int story_id) throws SQLException {
+    public static Connection getConnection() throws SQLException {
+        return DriverManager.getConnection(
+                        "jdbc:mysql://localhost:3306/soloaventyr?allowPublicKeyRetrieval=TRUE&useSSL=false&serverTimezone=UTC",
+                        "jesper", "elev123");
+    }
+
+    public static String getStoryBody(Statement stmt, int story_id){
         String strSelect = "select body from story where id = " + story_id;
         System.out.println("This SQL statement is: " + strSelect + "\n");
-        ResultSet rset = stmt.executeQuery(strSelect);
-
-        System.out.println("Story body:");
+        ResultSet rset = null;
         String body = "";
-        while (rset.next()) {
-            body = rset.getString("body");
-            // System.out.println(body);
+        try {
+            rset = stmt.executeQuery(strSelect);
+            System.out.println("Story body:");
+            while (rset.next()) {
+                body = rset.getString("body");
+                // System.out.println(body);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         }
+
+
         return body;
     }
 }
