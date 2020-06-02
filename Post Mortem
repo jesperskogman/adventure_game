@@ -1,0 +1,9 @@
+Post mortem
+
+Syftet med detta arbete är att skapa ett arbete som innehåller alla delar som vi har jobbat med under programeringskursen. Jag valde att försöka fixa så att adventure gamet som vi gjorde i webbserverprogrameringen så att det funkar i java.
+
+För detta arbete så började jag med att kolla igenom koden som tar data från en databas som vi gjort tidigare och kopierade in den i detta projekt. Efter det så funderade jag hur jag skulle få allting att fungera. Jag började med att söka runt på internettet efter en lösning men Eftersom jag inte riktigt visste vad jag skiulle söka efter så fick frågade jag tillslut Magnus om hjälp och löste det på det viset. Min planering genom arbetet har inte varit så bra, jag är inte jätteduktig på att planera generellt och detta projektet var inget undantag. Men min idé var att göra en enkel textruta med tre knappar i botten som skulle vara de olika valen. Efter det så satte jag ihop ett trellobräde med de olika delarna i mer detalj sdå att jag lätt kunde bocka av det senare. Min planering är väldigt "bare bones" men den funkar för mig.
+
+Jag tycker att det som har gått bäst i detta projekt var att hämta datan ifrån databasen och få in den i koden. Annars så har allt gått dåligt eftersom jag inte riktigt har vetat hur jag ska göra saker. Jag har fått fråga Magnus väldigt mycket hur jag skulle göra, men till slut så fick jag ett fungerande program som har alla delar si sig som behövs för att få ett godkänt betyg men det finns mycket som jag fortfarande skulle kunna förbättra.
+
+Jag tycker att detta projektet har varit roligt även fast det inte har gått så bra. Jag känner att jag faktiskt har lärt mig väldigt mycket även fast det gick dåligt. Jag tycker att eftersom det har gått dåligt så har jag fått lösa problemet och därav lärt mig mycket mer som jag senare kan aqnvända mig av för att vidareutväckla mitt program för att det ska bli ett som jag kan vara nöjd över.
